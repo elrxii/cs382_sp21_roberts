@@ -1,6 +1,6 @@
 To clone repo:  git clone https://github.com/elrxii/cs382_sp21_roberts.git 
 
-To run WorldTrotter: 
+To run Lab 08: 
 1. git pull
 2. git checkout Lab08WorldTrotter 
 3. Via Terminal, navigate to: apps/WorldTrotter/ 
