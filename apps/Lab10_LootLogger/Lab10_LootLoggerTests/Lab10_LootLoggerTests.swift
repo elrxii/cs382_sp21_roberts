@@ -1,14 +1,14 @@
 //
-//  WorldTrotterTests.swift
-//  WorldTrotterTests
+//  Lab10_LootLoggerTests.swift
+//  Lab10_LootLoggerTests
 //
-//  Created by Ethan Roberts on 2/10/21.
+//  Created by Ethan Roberts on 3/23/21.
 //
 
 import XCTest
-@testable import WorldTrotter
+@testable import Lab10_LootLogger
 
-class WorldTrotterTests: XCTestCase {
+class Lab10_LootLoggerTests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
