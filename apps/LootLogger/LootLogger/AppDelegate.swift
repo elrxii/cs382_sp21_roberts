@@ -1,13 +1,13 @@
 //
 //  AppDelegate.swift
-//  Lab10_LootLogger
+//  LootLogger
 //
-//  Created by Ethan Roberts on 3/23/21.
+//  Created by Ethan Roberts on 3/25/21.
 //
 
 import UIKit
 
-@main
+@UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
 

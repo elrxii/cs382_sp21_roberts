@@ -1,29 +1,29 @@
 //
-//  Lab10_LootLoggerTests.swift
-//  Lab10_LootLoggerTests
+//  LootLoggerTests.swift
+//  LootLogger
 //
-//  Created by Ethan Roberts on 3/23/21.
+//  Created by Ethan Roberts on 3/25/21.
 //
 
 import XCTest
-@testable import Lab10_LootLogger
+@testable import LootLogger
 
-class Lab10_LootLoggerTests: XCTestCase {
+class LootLoggerTests: XCTestCase {
 
-    override func setUpWithError() throws {
+    override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }
 
-    override func tearDownWithError() throws {
+    override func tearDown() {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testExample() throws {
+    func testExample() {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
     }
 
-    func testPerformanceExample() throws {
+    func testPerformanceExample() {
         // This is an example of a performance test case.
         self.measure {
             // Put the code you want to measure the time of here.
