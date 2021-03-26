@@ -2,7 +2,7 @@
 //  SceneDelegate.swift
 //  LootLogger
 //
-//  Created by Ethan Roberts on 3/25/21.
+//  Created by Ethan Roberts on 3/26/21.
 //
 
 import UIKit
@@ -15,11 +15,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let _ = (scene as? UIWindowScene) else { return }
         
-        // Create an ItemStore
+        
         let itemStore = ItemStore()
 
-        // Access the ItemsViewController and set its item store
-        let itemsController = window!.rootViewController as! ItemsViewController
+        let navController = window!.rootViewController as! UINavigationController
+        let itemsController = navController.topViewController as! ItemsViewController
         itemsController.itemStore = itemStore
     }
 

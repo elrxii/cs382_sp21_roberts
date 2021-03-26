@@ -2,7 +2,7 @@
 //  Item.swift
 //  LootLogger
 //
-//  Created by Ethan Roberts on 3/25/21.
+//  Created by Ethan Roberts on 3/26/21.
 //
 
 import UIKit
@@ -13,7 +13,6 @@ class Item: Equatable {
     var serialNumber: String?
     let dateCreated: Date
     
-  
     static func ==(lhs: Item, rhs: Item) -> Bool {
         return lhs.name == rhs.name
             && lhs.serialNumber == rhs.serialNumber

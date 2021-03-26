@@ -2,7 +2,7 @@
 //  ItemsViewController.swift
 //  LootLogger
 //
-//  Created by Ethan Roberts on 3/25/21.
+//  Created by Ethan Roberts on 3/26/21.
 //
 
 import UIKit
@@ -10,26 +10,28 @@ import UIKit
 class ItemsViewController: UITableViewController {
     
     var itemStore: ItemStore!
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
 
-    @IBAction func toggleEditingMode(_ sender: UIButton) {
-        // If you are currently in editing mode...
-        if isEditing {
-            // Change text of button to inform user of state
-            sender.setTitle("Edit", for: .normal)
-
-            // Turn off editing mode
-            setEditing(false, animated: true)
-        } else {
-            // Change text of button to inform user of state
-            sender.setTitle("Done", for: .normal)
-
-            // Enter editing mode
-            setEditing(true, animated: true)
-        }
+        navigationItem.leftBarButtonItem = editButtonItem
     }
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        tableView.rowHeight = UITableView.automaticDimension
+        tableView.estimatedRowHeight = 65
+        
+    }
     
-    @IBAction func addNewItem(_ sender: UIButton) {
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        tableView.reloadData()
+    }
+    
+    @IBAction func addNewItem(_ sender: UIBarButtonItem) {
         // Create a new item and add it to the store
         let newItem = itemStore.createItem()
 
@@ -66,7 +68,6 @@ class ItemsViewController: UITableViewController {
         return cell
     }
     
-    
     override func tableView(_ tableView: UITableView,
                             commit editingStyle: UITableViewCell.EditingStyle,
                             forRowAt indexPath: IndexPath) {
@@ -81,8 +82,6 @@ class ItemsViewController: UITableViewController {
         }
     }
     
-    
-    
     override func tableView(_ tableView: UITableView,
                             moveRowAt sourceIndexPath: IndexPath,
                             to destinationIndexPath: IndexPath) {
@@ -90,6 +89,22 @@ class ItemsViewController: UITableViewController {
         itemStore.moveItem(from: sourceIndexPath.row, to: destinationIndexPath.row)
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // If the triggered segue is the "showItem" segue
+        switch segue.identifier {
+        case "showItem"?:
+            // Figure out which row was just tapped
+            if let row = tableView.indexPathForSelectedRow?.row {
 
+                // Get the item associated with this row and pass it along
+                let item = itemStore.allItems[row]
+                let detailViewController
+                        = segue.destination as! DetailViewController
+                detailViewController.item = item
+            }
+        default:
+            preconditionFailure("Unexpected segue identifier.")
+        }
+    }
 
 }

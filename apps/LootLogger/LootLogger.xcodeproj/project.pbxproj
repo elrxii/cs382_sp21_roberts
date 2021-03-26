@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		95343399234D5B5700886B44 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95343398234D5B5700886B44 /* DetailViewController.swift */; };
 		95753120234C43DB00229B3E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9575311F234C43DB00229B3E /* AppDelegate.swift */; };
 		95753122234C43DB00229B3E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95753121234C43DB00229B3E /* SceneDelegate.swift */; };
 		95753127234C43DB00229B3E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95753125234C43DB00229B3E /* Main.storyboard */; };
@@ -38,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		95343398234D5B5700886B44 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		9575311C234C43DB00229B3E /* LootLogger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LootLogger.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9575311F234C43DB00229B3E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		95753121234C43DB00229B3E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -111,6 +113,7 @@
 				95753153234C45B000229B3E /* ItemStore.swift */,
 				95753125234C43DB00229B3E /* Main.storyboard */,
 				9575314F234C441600229B3E /* ItemsViewController.swift */,
+				95343398234D5B5700886B44 /* DetailViewController.swift */,
 				95DC46D3234C4D6700C7B2EF /* ItemCell.swift */,
 				95753128234C43DC00229B3E /* Assets.xcassets */,
 				9575312A234C43DC00229B3E /* LaunchScreen.storyboard */,
@@ -274,6 +277,7 @@
 				95753120234C43DB00229B3E /* AppDelegate.swift in Sources */,
 				95753154234C45B000229B3E /* ItemStore.swift in Sources */,
 				95753122234C43DB00229B3E /* SceneDelegate.swift in Sources */,
+				95343399234D5B5700886B44 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

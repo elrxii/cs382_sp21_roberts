@@ -2,7 +2,7 @@
 //  ItemStore.swift
 //  LootLogger
 //
-//  Created by Ethan Roberts on 3/25/21.
+//  Created by Ethan Roberts on 3/26/21.
 //
 
 import UIKit
@@ -19,13 +19,11 @@ class ItemStore {
         return newItem
     }
     
-    
     func removeItem(_ item: Item) {
         if let index = allItems.firstIndex(of: item) {
             allItems.remove(at: index)
         }
     }
-    
     
     func moveItem(from fromIndex: Int, to toIndex: Int) {
         if fromIndex == toIndex {
