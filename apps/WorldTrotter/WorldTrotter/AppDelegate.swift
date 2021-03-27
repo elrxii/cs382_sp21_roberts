@@ -2,12 +2,12 @@
 //  AppDelegate.swift
 //  WorldTrotter
 //
-//  Created by Ethan Roberts on 2/10/21.
+//  Created by Ethan Roberts on 03/27/21.
 //
 
 import UIKit
 
-@main
+@UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
 

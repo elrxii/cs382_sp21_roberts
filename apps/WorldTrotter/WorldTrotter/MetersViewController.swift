@@ -1,5 +1,5 @@
 //
-//  ConversionViewController.swift
+//  MetersViewController.swift
 //  WorldTrotter
 //
 //  Created by Ethan Roberts on 03/27/21.
@@ -7,19 +7,19 @@
 
 import UIKit
 
-class ConversionViewController: UIViewController, UITextFieldDelegate {
+class MetersViewController: UIViewController, UITextFieldDelegate {
     
-    @IBOutlet var celsiusLabel: UILabel!
-    @IBOutlet var textField: UITextField!
+    @IBOutlet var footField: UITextField!
+    @IBOutlet var meterField: UILabel!
     
-    var fahrenheitValue: Measurement<UnitTemperature>? {
+    var feetValue: Measurement<UnitLength>? {
         didSet {
-            updateCelsiusLabel()
+            updateGallonLabel()
         }
     }
-    var celsiusValue: Measurement<UnitTemperature>? {
-        if let fahrenheitValue = fahrenheitValue {
-            return fahrenheitValue.converted(to: .celsius)
+    var metersValue: Measurement<UnitLength>? {
+        if let feetVal = feetValue {
+            return feetVal.converted(to: .meters)
         } else {
             return nil
         }
@@ -29,38 +29,46 @@ class ConversionViewController: UIViewController, UITextFieldDelegate {
         let nf = NumberFormatter()
         nf.numberStyle = .decimal
         nf.minimumFractionDigits = 0
-        nf.maximumFractionDigits = 1
+        nf.maximumFractionDigits = 3
         return nf
     }()
     
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         print("ConversionViewController loaded its view.")
-        
-        updateCelsiusLabel()
+        updateGallonLabel()
     }
     
-    @IBAction func fahrenheitFieldEditingChanged(_ textField: UITextField) {
+
+
+    @IBAction func meterChanged(_ textField: UITextField) {
         if let text = textField.text, let value = Double(text) {
-            fahrenheitValue = Measurement(value: value, unit: .fahrenheit)
+            feetValue = Measurement(value: value, unit: .feet)
         } else {
-            fahrenheitValue = nil
+            feetValue = nil
         }
     }
+    
+    
     
     @IBAction func dismissKeyboard(_ sender: UITapGestureRecognizer) {
-        textField.resignFirstResponder()
+        footField.resignFirstResponder()
     }
     
-    func updateCelsiusLabel() {
-        if let celsiusValue = celsiusValue {
-            celsiusLabel.text =
-                numberFormatter.string(from: NSNumber(value: celsiusValue.value))
+    
+    
+    func updateGallonLabel() {
+        if let metersValue = metersValue {
+            meterField?.text =
+                numberFormatter.string(from: NSNumber(value: metersValue.value))
         } else {
-            celsiusLabel.text = "???"
+            meterField?.text = "???"
         }
     }
+    
+    
     
     func textField(_ textField: UITextField,
                    shouldChangeCharactersIn range: NSRange,
@@ -75,4 +83,5 @@ class ConversionViewController: UIViewController, UITextFieldDelegate {
         }
     }
 }
+
 
