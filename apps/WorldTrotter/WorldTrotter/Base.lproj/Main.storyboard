@@ -88,7 +88,6 @@
         <!--MetersViewController-->
         <scene sceneID="hJL-bs-27E">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="N94-WX-h42" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController title="MetersViewController" id="oqz-oj-q7H" customClass="MetersViewController" customModule="WorldTrotter" sceneMemberID="viewController">
                     <mapView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" id="nYv-x3-mRj">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
@@ -96,6 +95,7 @@
                     </mapView>
                     <tabBarItem key="tabBarItem" title="Map" image="map" catalog="system" id="4m1-BV-vis"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="N94-WX-h42" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1478" y="674"/>
         </scene>
