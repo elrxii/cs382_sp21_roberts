@@ -1,8 +1,8 @@
 //
 //  AppDelegate.swift
-//  LootLogger
+//  WorldTrotter
 //
-//  Created by Ethan Roberts on 3/25/21.
+//  Created by Ethan Roberts on 03/27/21.
 //
 
 import UIKit
