@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item-->
+        <!--Convert-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ConversionViewController" customModule="WorldTrotter" customModuleProvider="target" sceneMemberID="viewController">
@@ -95,17 +95,17 @@
                             <constraint firstItem="8cd-PL-G1p" firstAttribute="top" secondItem="aaE-Qm-j7M" secondAttribute="bottom" constant="8" id="xtv-k3-rie"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="bTV-aB-WCb"/>
+                    <tabBarItem key="tabBarItem" title="Convert" image="thermometer" catalog="system" id="bTV-aB-WCb"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-777" y="655"/>
         </scene>
-        <!--Item 2-->
+        <!--Map-->
         <scene sceneID="87s-aN-vME">
             <objects>
                 <viewController id="ySH-4a-ijd" customClass="MapViewController" customModule="WorldTrotter" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item 2" id="9CL-MM-tEU"/>
+                    <tabBarItem key="tabBarItem" title="Map" image="map" catalog="system" id="9CL-MM-tEU"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GIq-1U-tZS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -131,6 +131,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="map" catalog="system" width="128" height="110"/>
+        <image name="thermometer" catalog="system" width="93" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
