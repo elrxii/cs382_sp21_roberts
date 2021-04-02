@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:LootLogger.xcodeproj">
+      location = "self:Photorama.xcodeproj">
    </FileRef>
 </Workspace>

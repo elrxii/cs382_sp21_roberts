@@ -1,14 +1,17 @@
+// I had issues following along with instructions for this assignment.  I researched and utilized code from Big Nerd Ranch to complete this assignment.
+// source:  Swift Programming: The Big Nerd Ranch Guide (3rd Edition)
+
 //
-//  LootLoggerTests.swift
-//  LootLogger
+//  Item.swift
+//  Photorama
 //
-//  Created by Ethan Roberts on 3/26/21.
+//  Created by Ethan Roberts on 04/02/21.
 //
 
 import XCTest
-@testable import LootLogger
+@testable import Photorama
 
-class LootLoggerTests: XCTestCase {
+class PhotoramaTests: XCTestCase {
 
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.
